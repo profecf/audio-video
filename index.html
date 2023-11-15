@@ -34,5 +34,27 @@
         <track src="media/captions/metro-es.vtt" label="Espanyol" kind="captions" srclang="es">
         El teu navegador no suporta l'element HTML vídeo.
     </video>
+
+    <!-- Afegim el botó per a la captura de pantalla -->
+    <button id="botocaptura">Captura de pantalla</button>
+
+    <!-- Afegim un element canvas per mostrar la captura de pantalla -->
+    <canvas id="capturacanvas" style="border: 1px solid #000;"></canvas>
+
+    <script>
+        document.getElementById('botocaptura').addEventListener('click', function() {
+            // Obtenim l'element vídeo
+            var video = document.querySelector('video');
+
+            // Creem un element canvas
+            var canvas = document.getElementById('capturacanvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+
+            // Dibuixem el contingut del vídeo al canvas
+            var captura = canvas.getContext('2d');
+            captura.drawImage(video, 0, 0, canvas.width, canvas.height);
+        });
+    </script>
 </body>
 </html>
