@@ -1,9 +1,9 @@
 WEBVTT
 
 1
-00:00:02.000 --> 00:00:05.000
-Igual un poco de música
+00:00:02.000 --> 00:00:05.000 color:yellow
+Igual un poco de <i>música</i>
 
 2
-00:00:06.000 --> 00:00:09.000
+00:00:06.000 --> 00:00:09.000 color:yellow
 quedaría <b>bien</b> en este vídeo.
